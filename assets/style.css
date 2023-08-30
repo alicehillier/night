@@ -16,6 +16,7 @@ body {
     z-index: -5;
     height: 100%;
     width: 100%;
+    object-fit: fill;
 }
 
 main {
@@ -31,7 +32,7 @@ h1 {
 }
 
 nav ul {
-    margin: 2rem 4rem;
+    padding: 2rem 4rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
