@@ -97,7 +97,7 @@ li:hover,
 .fade-out {
     animation: fade-out;
     animation-fill-mode: forwards;
-    animation-duration: 3s;
+    animation-duration: 1.5s;
 }
 
 .fade-in-out {
