@@ -48,4 +48,30 @@ function pageOne() {
   intro2.innerHTML = "00:42";
   let main = document.getElementsByTagName('main');
   main[0].append(intro1, intro2);
+  setTimeout(() => {
+    intro1.classList.add('fade-out');
+    intro2.classList.add('fade-out');
+    setTimeout(() => {
+      pageTwo();
+    }, 3000);
+  }, 3000);
+}
+
+function pageTwo() {
+  intro1.style.display = "none";
+  intro2.style.display = "none";
+  let annie = document.createElement('p')
+  annie.setAttribute('id', 'annie');
+  annie.setAttribute('class', 'fade-in');
+  annie.innerHTML = "ANNIE";
+  let wakeUp = document.createElement('p')
+  wakeUp.setAttribute('id', 'wake-up');
+  wakeUp.setAttribute('class', 'fade-in');
+  wakeUp.innerHTML = "WAKE UP";
+  let main = document.getElementsByTagName('main');
+  main[0].append(annie, wakeUp);
+  setTimeout(() => {
+    annie.classList.add('fade-out');
+    wakeUp.classList.add('fade-out');
+  }, 3000);
 }

@@ -29,7 +29,9 @@ main {
 
 #title,
 #intro1,
-#intro2 {
+#intro2,
+#annie,
+#wake-up {
     font-size: 6rem;
     text-align: center;
 }
