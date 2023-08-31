@@ -1,6 +1,9 @@
 let audioIcon = document.getElementsByClassName('audio-icon');
 audioIcon[0].addEventListener('click', playAudio);
 
+let startBtn = document.getElementById('start');
+startBtn.addEventListener('click', start)
+
 function stopAudio() {
   let audio = document.getElementById('music');
   audio.pause();
@@ -17,4 +20,10 @@ function playAudio() {
   audioIcon[0].classList.add('fa-volume-high');
   audioIcon[0].removeEventListener('click', playAudio);
   audioIcon[0].addEventListener('click', stopAudio);
+}
+
+function start() {
+  let title = document.getElementById('title');
+  title.style.display = "none";
+  startBtn.style.display = "none";
 }
