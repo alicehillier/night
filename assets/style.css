@@ -64,6 +64,12 @@ li:hover,
     cursor: pointer;
 }
 
+.fade-in {
+    animation: fade-in;
+    animation-fill-mode: forwards;
+    animation-duration: 1.5s;
+}
+
 .fade-out {
     animation: fade-out;
     animation-fill-mode: forwards;
@@ -108,5 +114,15 @@ li:hover,
 
     100% {
         opacity: 0%;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;
     }
 }
