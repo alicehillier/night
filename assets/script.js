@@ -38,7 +38,7 @@ function start() {
 function pageOne() {
   title.style.display = "none";
   startBtn.style.display = "none";
-  let intro1 = document.createElement('p')
+  let intro1 = document.createElement('p');
   intro1.setAttribute('id', 'intro1');
   intro1.setAttribute('class', 'fade-in');
   intro1.innerHTML = "MONDAY";
@@ -52,26 +52,40 @@ function pageOne() {
     intro1.classList.add('fade-out');
     intro2.classList.add('fade-out');
     setTimeout(() => {
-      pageTwo();
+      pageTwo1();
     }, 3000);
   }, 3000);
 }
 
-function pageTwo() {
+function pageTwo1() {
   intro1.style.display = "none";
   intro2.style.display = "none";
   let annie = document.createElement('p')
-  annie.setAttribute('id', 'annie');
   annie.setAttribute('class', 'fade-in');
   annie.innerHTML = "ANNIE";
+  let main = document.getElementsByTagName('main');
+  main[0].append(annie);
+  annie.setAttribute('id', 'annie');
+  setTimeout(() => {
+    annie.classList.add('fade-out');
+    setTimeout(() => {
+      pageTwo2();
+    }, 3000);
+  }, 3000);
+}
+
+function pageTwo2() {
+  annie.style.display = "none";
   let wakeUp = document.createElement('p')
-  wakeUp.setAttribute('id', 'wake-up');
   wakeUp.setAttribute('class', 'fade-in');
   wakeUp.innerHTML = "WAKE UP";
   let main = document.getElementsByTagName('main');
-  main[0].append(annie, wakeUp);
+  main[0].append(wakeUp);
+  wakeUp.setAttribute('id', 'wake-up');
   setTimeout(() => {
-    annie.classList.add('fade-out');
     wakeUp.classList.add('fade-out');
+    setTimeout(() => {
+      console.log("finish");
+    }, 3000);
   }, 3000);
 }
