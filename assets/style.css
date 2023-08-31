@@ -10,6 +10,7 @@ body {
     color: white;
 }
 
+/* Positions the video in the background, taking up the full width and height of the page. */
 #bg-video {
     position: absolute;
     opacity: 33%;
@@ -36,6 +37,47 @@ i {
     font-size: 2rem;
 }
 
+nav ul {
+    padding: 2rem 4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+nav ul li {
+    list-style-type: none;
+    font-size: 2rem;
+}
+
+#start {
+    margin-top: 2rem;
+    font-size: 2rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* Shows which elements are interactive. */
+li:hover,
+.fa-solid:hover {
+    animation: none;
+    color: gray;
+    cursor: pointer;
+}
+
+.fade-out {
+    animation: fade-out;
+    animation-fill-mode: forwards;
+    animation-duration: 1.5s;
+}
+
+.fade-in-out {
+    animation: fade-in-out;
+    animation-fill-mode: forwards;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+/* Creates a slow pulsing effect for the start section of the title page. */
 @keyframes fade-in-out {
     0% {
         color: white;
@@ -58,6 +100,7 @@ i {
     }
 }
 
+/* Fades the title page's main content until it is no longer visible. */
 @keyframes fade-out {
     0% {
         opacity: 100%;
@@ -66,43 +109,4 @@ i {
     100% {
         opacity: 0%;
     }
-}
-
-nav ul {
-    padding: 2rem 4rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-nav ul li {
-    list-style-type: none;
-    font-size: 2rem;
-}
-
-#start {
-    margin-top: 2rem;
-    font-size: 2rem;
-    text-align: center;
-}
-
-li:hover,
-#start:hover,
-.fa-solid:hover {
-    animation: none;
-    color: gray;
-    cursor: pointer;
-}
-
-.fade-out {
-    animation: fade-out;
-    animation-fill-mode: forwards;
-    animation-duration: 1.5s;
-}
-
-.fade-in-out {
-    animation: fade-in-out;
-    animation-fill-mode: forwards;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
 }

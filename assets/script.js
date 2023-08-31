@@ -33,5 +33,5 @@ function start() {
   setTimeout(() => {
     title.style.display = "none";
     startBtn.style.display = "none";
-  }, 3000);
+  }, 1500);
 }
