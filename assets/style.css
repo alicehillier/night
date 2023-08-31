@@ -27,7 +27,9 @@ main {
     transform: translate(-50%, -50%);
 }
 
-#title {
+#title,
+#intro1,
+#intro2 {
     font-size: 6rem;
     text-align: center;
 }
@@ -67,13 +69,13 @@ li:hover,
 .fade-in {
     animation: fade-in;
     animation-fill-mode: forwards;
-    animation-duration: 1.5s;
+    animation-duration: 5s;
 }
 
 .fade-out {
     animation: fade-out;
     animation-fill-mode: forwards;
-    animation-duration: 1.5s;
+    animation-duration: 3s;
 }
 
 .fade-in-out {

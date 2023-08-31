@@ -31,7 +31,21 @@ function start() {
   startBtn.removeAttribute('class', 'fade-in-out');
   startBtn.classList.add('fade-out');
   setTimeout(() => {
-    title.style.display = "none";
-    startBtn.style.display = "none";
-  }, 1500);
+    pageOne();
+  }, 3000);
+}
+
+function pageOne() {
+  title.style.display = "none";
+  startBtn.style.display = "none";
+  let intro1 = document.createElement('p')
+  intro1.setAttribute('id', 'intro1');
+  intro1.setAttribute('class', 'fade-in');
+  intro1.innerHTML = "MONDAY";
+  let intro2 = document.createElement('p')
+  intro2.setAttribute('id', 'intro2');
+  intro2.setAttribute('class', 'fade-in');
+  intro2.innerHTML = "00:42";
+  let main = document.getElementsByTagName('main');
+  main[0].append(intro1, intro2);
 }
