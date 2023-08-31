@@ -36,25 +36,21 @@ i {
     font-size: 2rem;
 }
 
-@keyframes jitter {
-    10% {
+@keyframes fade-in-out {
+    0% {
         color: white;
     }
 
-    30% {
-        color: gray;
+    25% {
+        color: rgb(70, 70, 70);
     }
 
     50% {
-        color: rgb(42, 42, 42);
+        color: white;
     }
 
-    70% {
-        color: whitesmoke;
-    }
-
-    90% {
-        color: gray;
+    75% {
+        color: rgb(70, 70, 70);
     }
 
     100% {
@@ -81,9 +77,9 @@ nav ul li {
 }
 
 .start a {
-    animation: jitter;
+    animation: fade-in-out;
     animation-fill-mode: forwards;
-    animation-duration: 10s;
+    animation-duration: 5s;
     animation-iteration-count: infinite;
 }
 
@@ -92,6 +88,9 @@ a {
     color: white;
 }
 
-a:hover {
+a:hover,
+.start a:hover,
+.fa-solid:hover {
+    animation: none;
     color: gray;
 }
