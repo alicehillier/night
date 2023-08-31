@@ -58,6 +58,16 @@ i {
     }
 }
 
+@keyframes fade-out {
+    0% {
+        opacity: 100%;
+    }
+
+    100% {
+        opacity: 0%;
+    }
+}
+
 nav ul {
     padding: 2rem 4rem;
     display: flex;
@@ -74,10 +84,6 @@ nav ul li {
     margin-top: 2rem;
     font-size: 2rem;
     text-align: center;
-    animation: fade-in-out;
-    animation-fill-mode: forwards;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
 }
 
 li:hover,
@@ -86,4 +92,17 @@ li:hover,
     animation: none;
     color: gray;
     cursor: pointer;
+}
+
+.fade-out {
+    animation: fade-out;
+    animation-fill-mode: forwards;
+    animation-duration: 3s;
+}
+
+.fade-in-out {
+    animation: fade-in-out;
+    animation-fill-mode: forwards;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
 }

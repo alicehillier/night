@@ -27,6 +27,11 @@ function playAudio() {
 /*Removes main content of title page and shows next page.*/
 function start() {
   let title = document.getElementById('title');
-  title.style.display = "none";
-  startBtn.style.display = "none";
+  title.classList.add('fade-out');
+  startBtn.removeAttribute('class', 'fade-in-out');
+  startBtn.classList.add('fade-out');
+  setTimeout(() => {
+    title.style.display = "none";
+    startBtn.style.display = "none";
+  }, 3000);
 }
