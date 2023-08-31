@@ -4,6 +4,7 @@ audioIcon[0].addEventListener('click', playAudio);
 let startBtn = document.getElementById('start');
 startBtn.addEventListener('click', start)
 
+/*Stops background music.*/
 function stopAudio() {
   let audio = document.getElementById('music');
   audio.pause();
@@ -13,6 +14,7 @@ function stopAudio() {
   audioIcon[0].addEventListener('click', playAudio);
 }
 
+/*Starts background music.*/
 function playAudio() {
   let audio = document.getElementById('music');
   audio.play();
@@ -22,6 +24,7 @@ function playAudio() {
   audioIcon[0].addEventListener('click', stopAudio);
 }
 
+/*Removes main content of title page and shows next page.*/
 function start() {
   let title = document.getElementById('title');
   title.style.display = "none";
